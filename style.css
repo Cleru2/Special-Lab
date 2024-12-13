@@ -19,7 +19,7 @@ body {
   position: relative;
   cursor: pointer;
   text-align: center;
-  background-image: url('file:///D:/Labs/classpic.jpg');
+  background-image: url('classpic.jpg');
   background-size: cover;
   background-position: center;
   width: 700px;
