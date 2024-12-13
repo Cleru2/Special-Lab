@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.envelope-container {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  background-image: url('file:///D:/Labs/classpic.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 700px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.click-instruction {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #8f8f8f;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.9);
+  border: 3px solid #333333;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #121212;
+  transition: transform 0.5s ease;
+  transform-origin: top;
+  border-bottom: 3px solid #333333;
+}
+
+.letter {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(26, 26, 26, 0.9);
+  padding: 30px 40px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.9);
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  font-size: 22px; 
+  color: #d4b3ff;
+  text-align: left;
+  line-height: 1.8;
+  border: 3px solid #333333;
+  border-radius: 0 0 15px 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: 'Verdana', sans-serif;
+  letter-spacing: 0.5px; 
+  word-wrap: break-word; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #d4b3ff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.envelope.open .circle {
+  top: 30%;
+  opacity: 0;
+}
+
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+.envelope.open .letter {
+  transform: translateY(0);
+}
